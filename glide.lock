@@ -1,0 +1,37 @@
+hash: c189c020a311a2bf51a18432be4bd96cba95a8ba7af577db5e7ce243efa8da81
+updated: 2016-10-21T14:22:05.992581367-05:00
+imports:
+- name: github.com/asaskevich/govalidator
+  version: 593d64559f7600f29581a3ee42177f5dbded27a9
+- name: github.com/blang/semver
+  version: 60ec3488bfea7cca02b021d106d9911120d25fe9
+- name: github.com/docker/distribution
+  version: 44c7fb9e6e7e58e88d38d93b5f1f6da6a54d28ff
+  subpackages:
+  - digest
+  - manifest
+- name: github.com/docker/docker
+  version: 59311faaed4e3384fc8da738a57a25f17ae07e05
+  subpackages:
+  - pkg/tarsum
+- name: github.com/docker/libtrust
+  version: 9cbd2a1374f46905c68a4eb3694a130610adc62a
+- name: github.com/drone/drone-go
+  version: eaa41f7836a191224ec5702d2458db07882ec269
+  subpackages:
+  - plugin
+- name: github.com/drone/drone-plugin-go
+  version: d6109f644c5935c22620081b4c234bb2263743c7
+  subpackages:
+  - plugin
+- name: github.com/franela/goblin
+  version: efa9910a3ea4ccb7ee4b977571318af2e51ba05f
+- name: github.com/heroku/docker-registry-client
+  version: ddbd05bac47f55e533a7ed124211ef7e076b0bf3
+  subpackages:
+  - registry
+- name: github.com/Sirupsen/logrus
+  version: 418b41d23a1bf978c06faea5313ba194650ac088
+- name: gopkg.in/yaml.v2
+  version: a83829b6f1293c91addabc89d0571c246397bbf4
+testImports: []

@@ -1,0 +1,34 @@
+package: github.com/LeanKit-Labs/drone-cowpoke
+import:
+- package: github.com/Sirupsen/logrus
+  version: ~0.8.7
+- package: github.com/asaskevich/govalidator
+  version: 593d64559f7600f29581a3ee42177f5dbded27a9
+- package: github.com/blang/semver
+  version: ~3.3.0
+- package: github.com/docker/distribution
+  version: ~2.1.0
+  subpackages:
+  - digest
+  - manifest
+- package: github.com/docker/docker
+  version: 59311faaed4e3384fc8da738a57a25f17ae07e05
+  subpackages:
+  - pkg/tarsum
+- package: github.com/docker/libtrust
+  version: 9cbd2a1374f46905c68a4eb3694a130610adc62a
+- package: github.com/drone/drone-plugin-go
+  version: d6109f644c5935c22620081b4c234bb2263743c7
+  subpackages:
+  - plugin
+- package: github.com/franela/goblin
+  version: efa9910a3ea4ccb7ee4b977571318af2e51ba05f
+- package: github.com/heroku/docker-registry-client
+  version: ddbd05bac47f55e533a7ed124211ef7e076b0bf3
+  subpackages:
+  - registry
+- package: gopkg.in/yaml.v2
+  version: a83829b6f1293c91addabc89d0571c246397bbf4
+- package: github.com/drone/drone-go
+  subpackages:
+  - plugin

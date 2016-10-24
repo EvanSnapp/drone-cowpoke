@@ -48,6 +48,7 @@ func exec(p *types.Plugin) error {
 	var catalogs []types.CatalogInfo
 	rawData, err := ioutil.ReadFile(catalogsFile)
 	if err != nil {
+		fmt.Println("Error Reading File")
 		return err
 	}
 	yaml.Unmarshal(rawData, &catalogs)
@@ -55,6 +56,7 @@ func exec(p *types.Plugin) error {
 	for _, catalog := range catalogs {
 		request, err := cowpokeRequest(catalog.Version, catalog.Branch, p.CatalogRepo, p.RancherCatalogName, p.GitHubToken, p.CowpokeURL, p.BearerToken)
 		if err != nil {
+			fmt.Println("Error building request")
 			return err
 		}
 		client := http.Client{
@@ -62,11 +64,13 @@ func exec(p *types.Plugin) error {
 		}
 		response, err := client.Do(request)
 		if err != nil {
+			fmt.Printf("error sending request: %s\n", request.URL)
 			return err
 		}
 		contents, err := ioutil.ReadAll(response.Body)
 		response.Body.Close()
 		if err != nil {
+			fmt.Println("Error reading response")
 			return err
 		}
 		fmt.Println("response status code:", response.StatusCode)
